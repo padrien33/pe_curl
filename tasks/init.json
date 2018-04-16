@@ -9,7 +9,6 @@
 	},
 	"port": {
 		"description": "Port to use for CURL",
-		"type": "Integer"
-	}
+		"type": "Optional[Integer]"	}
   }
 }
