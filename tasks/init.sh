@@ -27,5 +27,11 @@
 # Learn more at: https://puppet.com/docs/bolt/latest/task_metadata.html
 #
 echo $PT_url
-curl $PT_url
+if [ ! -z "$PT_port" ]; then
+  echo Port:$PT_port
+  curl $PT_url\:$PT_port
+else
+  curl $PT_url
+fi
+
 
